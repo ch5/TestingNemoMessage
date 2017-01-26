@@ -1,0 +1,17 @@
+<h1>New Message</h1>
+
+<%= render 'form', message: @message %>
+
+<hr>
+<table border="1">
+  <tr>
+    <th>Messages</th>
+    <th>Time</th>
+  </tr>
+  <% @messagges.each do |message| %>
+    <tr>
+      <td><%= message.text %></td>
+      <td><%= message.created_at %></td>
+    </tr>
+  <% end %>
+</table>
