@@ -2,7 +2,7 @@ require 'nexmo'
 
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
-
+  autocomplete :phone, :name, :full => true
   # GET /messages
   # GET /messages.json
   def index
@@ -54,4 +54,5 @@ class MessagesController < ApplicationController
     def message_params
       params.require(:message).permit(:text, :phone_id)
     end
+
 end

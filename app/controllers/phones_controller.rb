@@ -1,6 +1,5 @@
 class PhonesController < ApplicationController
   before_action :set_phone, only: [:show, :edit, :update, :destroy]
-
   # GET /phones
   # GET /phones.json
   def index
@@ -71,4 +70,5 @@ class PhonesController < ApplicationController
     def phone_params
       params.require(:phone).permit(:number, :name)
     end
+
 end
